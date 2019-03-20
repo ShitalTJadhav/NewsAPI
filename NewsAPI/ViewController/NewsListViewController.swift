@@ -13,7 +13,7 @@ class NewsListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var indicatorView: UIActivityIndicatorView!
     
-    private var feedService: FeedsService!
+    private var newsService: NewsService!
     private var viewModel: NewsListViewModel!
     
     override func viewDidLoad() {
@@ -21,8 +21,8 @@ class NewsListViewController: UIViewController {
 
         self.title = "News"
         
-        feedService = FeedsService(networking: NetworkService.shared)
-        self.viewModel = NewsListViewModel(service: feedService)
+        newsService = NewsService(networking: NetworkService.shared)
+        self.viewModel = NewsListViewModel(service: newsService)
         
         //Set up indicator
         setUpIndicatorView()

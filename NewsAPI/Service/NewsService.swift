@@ -1,5 +1,5 @@
 //
-//  FeedsService.swift
+//  NewsService.swift
 //
 //  Created by Tushar  Jadhav on 2019-03-03.
 //  Copyright © 2019 Shital  Jadhav. All rights reserved.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FeedsService {
+final class NewsService {
     
     private let networking: NetworkingProtocol?
     

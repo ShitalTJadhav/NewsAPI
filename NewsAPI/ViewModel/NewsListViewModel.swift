@@ -10,16 +10,16 @@ import Foundation
 
 class NewsListViewModel {
     
-    weak var service :FeedsService?
-    var dataList : [Article] = []
+    weak var service: NewsService?
+    var dataList: [Article] = []
     
     // date indicating from 'from' fetch all news
-    var fromDate : String = ""
+    var fromDate: String = ""
     
     // date indicating from 'to' fetch all news
-    var toDate : String = ""
+    var toDate: String = ""
     
-    init(service : FeedsService) {
+    init(service : NewsService) {
         self.service = service
         
         toDate = toDate.getCurrentDate()
