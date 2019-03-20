@@ -23,7 +23,7 @@ class NewsCustomCell: UITableViewCell {
         
             titleLabel.text = model.title
             sourceLabel.text = model.source.name
-            postDateLabel.text = model.publishedAt.getFeedPostDate()
+            postDateLabel.text = model.publishedAt.getNewsPostDate()
             
         }
     }
