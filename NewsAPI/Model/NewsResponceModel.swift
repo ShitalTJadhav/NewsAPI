@@ -1,5 +1,5 @@
 //
-//  NewResponceModel.swift
+//  NewsResponceModel.swift
 //  NewsAPI
 //
 //  Created by Tushar  Jadhav on 2019-03-20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewResponceModel: Decodable {
+struct NewsResponceModel: Decodable {
     
     let status: String
     let totalResults: Int
