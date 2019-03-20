@@ -15,7 +15,7 @@ protocol NetworkingProtocol {
     ///   - parameters: Parameters as query items
     ///   - completion: Called when operation finishes
     /// - Returns: The data task
-    @discardableResult func fetch(resource: Resource, completion: @escaping (Data?) -> Void) -> URLSessionTask?
+    @discardableResult func fetch(resource: Resource, completion: @escaping (AnyObject?) -> Void) -> URLSessionTask?
 }
 
 /// Used to fetch data from network
@@ -38,7 +38,7 @@ class NetworkService : NetworkingProtocol {
         self.session = URLSession(configuration: configuration)
     }
     
-    @discardableResult func fetch(resource: Resource, completion: @escaping (Data?) -> Void) -> URLSessionTask? {
+    @discardableResult func fetch(resource: Resource, completion: @escaping (AnyObject?) -> Void) -> URLSessionTask? {
         guard let request = makeRequest(resource: resource) else {
             completion(nil)
             return nil
@@ -47,11 +47,11 @@ class NetworkService : NetworkingProtocol {
         let task = session.dataTask(with: request, completionHandler: { data, _, error in
         
             guard let data = data, error == nil else {
-                completion(nil)
+                completion(error as AnyObject)
                 return
             }
             
-            completion(data)
+            completion(data as AnyObject)
         })
         
         task.resume()
