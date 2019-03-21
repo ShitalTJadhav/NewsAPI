@@ -45,8 +45,7 @@ class NetworkService : NetworkingProtocol {
         }
         
         let task = session.dataTask(with: request, completionHandler: { data, _, error in
-        
-            guard let data = data, error == nil else {
+            if let error = error {
                 completion(error as AnyObject)
                 return
             }
