@@ -23,6 +23,7 @@ class NewsListViewModel {
         self.service = service
         
         toDate = toDate.getCurrentDate()
+//        fromDate = toDate
     }
     
     var totalNewsCount: Int {
@@ -50,8 +51,8 @@ class NewsListViewModel {
                 }
             case .success(let response):
                 
-                self?.dataList = response.articles
-                
+              //  self?.dataList = response.articles
+              self?.dataList  = response.articles.sorted {$0.publishedAt > $1.publishedAt}
                 DispatchQueue.main.async {
                     completion(Result.success(response.articles))
                 }
