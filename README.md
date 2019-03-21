@@ -1,5 +1,5 @@
 # NewsAPI
-An iOS demo project in Swift for fetching latest news list.
+An iOS demo project in Swift for fetching latest news articles list.
 
 
 #### Requirements : 
