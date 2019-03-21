@@ -22,6 +22,4 @@ In this project I have create news articles list and details using MVVM architec
    **NewsViewModelTest** : Testing news list network call.
  
  #### Screen Shot 
-  <img src="https://github.com/ShitalTJadhav/NewsAPI/blob/master/ScreenShot/Simulator%20Screen%20Shot%20-%20iPhone%20XR%20-%202019-03-21%20at%2013.20.49.png" width="200" height="400" />
-
-  <img src="https://github.com/ShitalTJadhav/NewsAPI/blob/master/ScreenShot/Simulator%20Screen%20Shot%20-%20iPhone%20XR%20-%202019-03-21%20at%2013.20.54.png" width="200" height="400" />
+  <img src="https://github.com/ShitalTJadhav/NewsAPI/blob/master/ScreenShot/Simulator%20Screen%20Shot%20-%20iPhone%20XR%20-%202019-03-21%20at%2013.20.49.png" width="200" height="400" />    <img src="https://github.com/ShitalTJadhav/NewsAPI/blob/master/ScreenShot/Simulator%20Screen%20Shot%20-%20iPhone%20XR%20-%202019-03-21%20at%2013.20.54.png" width="200" height="400" />
