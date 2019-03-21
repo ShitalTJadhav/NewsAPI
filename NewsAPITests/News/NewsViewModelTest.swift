@@ -1,6 +1,6 @@
 //
-//  FeedsViewModelTest.swift
-//  ActivitiesAppTests
+//  NewsViewModelTest.swift
+//  NewsAPITests
 //
 //  Created by Tushar  Jadhav on 2019-03-04.
 //  Copyright © 2019 Shital  Jadhav. All rights reserved.
