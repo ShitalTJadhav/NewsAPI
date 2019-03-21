@@ -56,6 +56,6 @@ class NewsCustomCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        newsIconImageView?.cancelImageDownloadingTask()
+        newsImage?.completeDownload = nil
     }
 }
