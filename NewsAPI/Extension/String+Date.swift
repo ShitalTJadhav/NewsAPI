@@ -27,6 +27,7 @@ extension String {
     {
         let currentDateTime = Date()
         let dateFormatter = getDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let result:String = dateFormatterToString(dateFormatter,currentDateTime)
         
         return result
@@ -55,9 +56,8 @@ extension String {
             return ""
         }
         
-        let dateFormatter = getDateFormatter()
         formatter.dateFormat = "dd MMM yyyy"
-        let result:String = dateFormatterToString(dateFormatter,date)        //Set timestyle and date style to compare date
+        let result:String = dateFormatterToString(formatter,date)        //Set timestyle and date style to compare date
         return result
     }
     
