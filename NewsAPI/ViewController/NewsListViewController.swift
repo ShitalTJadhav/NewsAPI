@@ -35,15 +35,21 @@ class NewsListViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "NewsDetailViewController" {
+            if let detailViewController = segue.destination as? NewsDetailViewController {
+                let cell = sender as! NewsCustomCell
+                detailViewController.article = cell.model
+            }
+        }
     }
-    */
+    
     
     // MARK: - Setup / Private methods
 
@@ -69,7 +75,6 @@ class NewsListViewController: UIViewController {
         //Set Indicator setting
         indicatorView.color = UIColor.gray
         indicatorView.hidesWhenStopped = true
-        indicatorView.accessibilityIdentifier = "NewsList_IndicatioView"
         indicatorView.startAnimating()
     }
     
@@ -77,7 +82,6 @@ class NewsListViewController: UIViewController {
         
         tableView.isHidden = true
         tableView.dataSource = self
-        tableView.accessibilityIdentifier = "NewsListTableViewIdentifier"
     }
 }
 
